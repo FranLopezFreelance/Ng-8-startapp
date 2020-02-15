@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <mat-icon class="icon" aria-hidden="false" aria-label="Icon">verified_user</mat-icon>
+  <span>
+    <a class="home" routerLink="/">Home</a>
+  </span>
+
+  <span class="spacer"></span>
+
+  <div *ngIf="isLoggedIn$ | async">
+    <span class="link" *ngIf="isLoggedIn$" (click)="logOut()">Salir</span>
+  </div>
+  <div *ngIf="isLoggedOut$ | async">
+    <span class="link"><a routerLink="/login">Login</a></span>
+    <span class="link"><a routerLink="/register">Register</a></span>
+  </div>
+</mat-toolbar>
