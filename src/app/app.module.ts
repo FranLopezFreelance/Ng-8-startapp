@@ -9,12 +9,14 @@ import { CoreModule } from './core/core.module';
 import { AuthModule } from './auth/auth.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppStoreModule } from './app-store/app-store.module';
-import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { EntityDataModule } from '@ngrx/data';
+import { entityConfig } from './entity-metadata';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [ AppComponent, PageNotFoundComponent ],
-  imports: [ BrowserModule, AuthModule, AppRoutingModule, CoreModule,
-    SharedModule, BrowserAnimationsModule, AppStoreModule ],
+  imports: [ BrowserModule, HttpClientModule, AuthModule, AppRoutingModule, CoreModule,
+    SharedModule, BrowserAnimationsModule, AppStoreModule, EntityDataModule.forRoot(entityConfig) ],
   providers: [],
   bootstrap: [ AppComponent ]
 })

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 
 const MODULES = [
+  MatProgressSpinnerModule,
   MatCardModule,
   MatToolbarModule,
   MatIconModule,

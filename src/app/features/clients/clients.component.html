@@ -1,1 +1,6 @@
-<p>clients works!</p>
+<h3>Clientes</h3>
+
+<app-client
+  *ngFor="let client of clients$ | async"
+  [client]="client">
+</app-client>

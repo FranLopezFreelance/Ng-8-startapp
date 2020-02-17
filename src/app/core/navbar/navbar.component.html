@@ -3,6 +3,9 @@
   <span>
     <a class="home" routerLink="/">Home</a>
   </span>
+  <div *ngIf="isLoggedIn$ | async">
+    <span class="link"><a routerLink="/clientes" routerLinkActive="active-route">Clientes</a></span>
+  </div>
 
   <span class="spacer"></span>
 
